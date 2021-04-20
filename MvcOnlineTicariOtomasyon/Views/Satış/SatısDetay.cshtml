@@ -1,0 +1,43 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.sınıf
+@model List<SatışHareketi>
+@{
+    ViewBag.Title = "SatısDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satış Detayı</h2>
+<br />
+
+<table class="table  table-bordered table-striped table-hover">
+    <tr>
+        <th>Satış Id</th>
+        <th>Ürün</th>
+        <th>Cari</th>
+        <th>Personel</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        
+    </tr>
+    @foreach (var x in Model)
+    {
+
+
+        <tr>
+            <td>@x.SatışId</td>
+            <td>@x.ürünler.UrunAd</td>
+            <td>@x.cariler.CariAd @x.cariler.CariSoyad</td>
+            <td>@x.personel.PersonelAd @x.personel.PersonelSoyad</td>
+            <td>@x.Fiyat</td>
+            <td>@x.Adet</td>
+            <td>@x.ToplamFiyat</td>
+            <td>@x.Tarih</td>
+           
+        </tr>
+    }
+</table>
+<button class="btn btn-outline-info">Yazdır</button>
+
+

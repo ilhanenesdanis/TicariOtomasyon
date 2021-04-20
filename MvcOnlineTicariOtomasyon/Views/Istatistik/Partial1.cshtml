@@ -1,0 +1,86 @@
+﻿@model IEnumerable<MvcOnlineTicariOtomasyon.Models.sınıf.SınıfGroup2>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Departman personel sayıları</h3>
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Departman</th>
+                    <th>Progress</th>
+                    <th style="width: 40px">Sayı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int sırano = 0;}
+                @foreach (var x in Model)
+                {
+
+
+                    <tr>
+                        <td>@{sırano++;}@sırano</td>
+                        <td>@x.Departman</td>
+                        <td>
+                            @if (x.sayı == 1)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar progress-bar-danger" style="width: @x.sayı%"></div>
+                                </div>
+                            }
+                            @if (x.sayı == 2)
+                            {
+                                <div class="progress progress-xs progress-striped">
+                                    <div class="progress-bar bg-success" style="width: @x.sayı%"></div>
+                                </div>
+                            }
+                            @if (x.sayı == 3)
+                            {
+                                <div class="progress progress-xs progress-striped">
+                                    <div class="progress-bar bg-success" style="width: @x.sayı%"></div>
+                                </div>
+                            }
+
+                        </td>
+                        <td>
+                            @if (x.sayı == 1)
+                            {
+                                <span class="badge bg-danger">
+                                    @x.sayı
+                                    %
+                                </span>
+                            }
+                            @if (x.sayı == 2)
+                            {
+                                <span class="badge bg-danger">
+                                    @x.sayı
+                                    %
+                                </span>
+                            }
+                            @if (x.sayı == 3)
+                            {
+                                <span class="badge bg-danger">
+                                    @x.sayı
+                                    %
+                                </span>
+                            }
+                            @if (x.sayı == 4)
+                            {
+                                <span class="badge bg-danger">
+                                    @x.sayı
+                                %
+                            </span>
+                        }
+                            @if (x.sayı == 5)
+                            {
+                                <span class="badge bg-info">@x.sayı%</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.sınıf.SatışHareketi
+@{
+    ViewBag.Title = "YeniSatıs";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Yeni ürün Satış sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.ürünler)
+
+    @Html.DropDownListFor(x => x.UrunId, (List<SelectListItem>)ViewBag.dg1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari")
+
+    @Html.DropDownListFor(x => x.CariId, (List<SelectListItem>)ViewBag.dg2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.personel)
+
+    @Html.DropDownListFor(x => x.PersonelId, (List<SelectListItem>)ViewBag.dg3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Adet)
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.ToplamFiyat)
+    @Html.TextBoxFor(x => x.ToplamFiyat, new { @class = "form-control" })
+<br />
+
+    <button class="btn btn-success">Satış Yap</button>
+</form>
+

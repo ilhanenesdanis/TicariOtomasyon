@@ -1,0 +1,65 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.sınıf
+@model List<SatışHareketi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<table class="table table-bordered table-striped table-hover" style="margin-top:20px;" id="tbl1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ürün</th>
+            <th>Cari</th>
+            <th>Personel</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Toplam Fiyat</th>
+            <th>Tarih</th>
+            <th>Güncelle</th>
+            <th>Detaylar</th>
+
+        </tr>
+    </thead>
+    @foreach (var x in Model)
+    {
+
+
+        <tr>
+            <td>@x.SatışId</td>
+            <td>@x.ürünler.UrunAd</td>
+            <td>@x.cariler.CariAd</td>
+            <td>@x.personel.PersonelAd</td>
+            <td>@x.Adet</td>
+            <td>@x.Fiyat</td>
+            <td>@x.ToplamFiyat</td>
+            <td>@x.Tarih</td>
+            <td><a href="/Satış/SatısGetir/@x.SatışId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Satış/SatısDetay/@x.SatışId" class="btn btn-info">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Satış/YeniSatıs" class="btn btn-info" style="transition:.5s linear;">Yeni Satış Ekle</a>
+
+
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#tbl1').dataTable({});
+
+</script>

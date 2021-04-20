@@ -1,0 +1,30 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.sınıf
+@model List<SatışHareketi>
+@{
+    ViewBag.Title = "Siparişlerim";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<h2>Sipariş Geçmişim</h2>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyat</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+
+
+    <tr>
+        <td>
+            @x.ürünler.UrunAd
+        </td>
+        <td>@x.Fiyat</td>
+        <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+    </tr>
+    }
+</table>
+
