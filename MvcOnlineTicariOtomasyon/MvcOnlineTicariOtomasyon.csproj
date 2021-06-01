@@ -2915,6 +2915,7 @@
     <Content Include="Views\CariPanel\Index.cshtml" />
     <Content Include="Views\CariPanel\Siparişlerim.cshtml" />
     <Content Include="Views\Deneme\Index.cshtml" />
+    <Content Include="Views\Urun\SatısYap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

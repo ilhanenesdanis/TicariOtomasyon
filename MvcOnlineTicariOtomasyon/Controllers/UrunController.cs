@@ -79,6 +79,24 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger = c.ürünlers.ToList();
             return View(deger);
         }
-        
+        [HttpGet]
+        public ActionResult SatısYap()
+        {
+            List<SelectListItem> deger3 = (from x in c.personels.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.PersonelAd + " " + x.PersonelSoyad,
+                                               Value = x.PersonelId.ToString()
+                                           }).ToList();
+            ViewBag.dgr3 = deger3;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SatısYap(SatışHareketi p)
+        {
+            return View();
+        }
+
+
     }
 }
