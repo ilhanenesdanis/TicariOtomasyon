@@ -23,26 +23,26 @@
         <th>Satış Fiyatı</th>
         <th>Kategori</th>
         <th>Durum</th>
-       
         <th>Sil</th>
         <th>Güncelle</th>
+        <th>Satış Yap</th>
         
     </tr>
     @foreach (var u in Model)
     {
-        <tr>
-            
-            <td>@u.UrunAd</td>
-            <td>@u.Marka</td>
-            <td>@u.Stok</td>
-            <td>@u.AlışFiyat ₺</td>
-            <td>@u.SatışFiyat ₺</td>
-            <td>@u.kategori.KategoriAd</td>
-            <td>@u.Durum</td>
-            
-            <td><a href="/Urun/UrunSil/@u.UrunId" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Urun/UrunGetir/@u.UrunId" class="btn btn-success">Güncelle</a></td>
-        </tr>
+<tr>
+
+    <td>@u.UrunAd</td>
+    <td>@u.Marka</td>
+    <td>@u.Stok</td>
+    <td>@u.AlışFiyat ₺</td>
+    <td>@u.SatışFiyat ₺</td>
+    <td>@u.kategori.KategoriAd</td>
+    <td>@u.Durum</td>
+    <td><a href="/Urun/UrunSil/@u.UrunId" class="btn btn-danger">Sil</a></td>
+    <td><a href="/Urun/UrunGetir/@u.UrunId" class="btn btn-success">Güncelle</a></td>
+    <td><a href="/Urun/SatısYap/@u.UrunId" class="btn btn-info">Satış Yap</a></td>
+</tr>
     }
 </table>
 <a class="btn btn-primary" href="/Urun/yeniurun/">Yeni ürün ekle</a>
