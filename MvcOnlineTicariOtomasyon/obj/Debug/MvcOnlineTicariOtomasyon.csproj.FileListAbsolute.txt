@@ -172,3 +172,6 @@ C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\M
 C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CopyComplete
 C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.dll
 C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.pdb
+C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.Migrations.kargotakip.resources
+C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.GenerateResource.cache
+C:\Users\Enesd\Source\Repos\TicariOtomasyon\MvcOnlineTicariOtomasyon\bin\QRCoder.dll

@@ -80,7 +80,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(deger);
         }
         [HttpGet]
-        public ActionResult SatısYap()
+        public ActionResult SatısYap(int id)
         {
             List<SelectListItem> deger3 = (from x in c.personels.ToList()
                                            select new SelectListItem
@@ -89,12 +89,19 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                                                Value = x.PersonelId.ToString()
                                            }).ToList();
             ViewBag.dgr3 = deger3;
+            var deger1 = c.ürünlers.Find(id);
+            
+            ViewBag.dgr1 = deger1.UrunId;
+            ViewBag.dgr2 = deger1.SatışFiyat;
             return View();
         }
         [HttpPost]
         public ActionResult SatısYap(SatışHareketi p)
         {
-            return View();
+            p.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            c.satışHareketis.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index", "Satış");
         }
 
 

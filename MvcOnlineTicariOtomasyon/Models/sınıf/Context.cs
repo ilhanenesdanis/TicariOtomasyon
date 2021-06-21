@@ -22,6 +22,8 @@ namespace MvcOnlineTicariOtomasyon.Models.sınıf
         public DbSet<Ürünler> ürünlers { get; set; }
         public DbSet<Detay> detays { get; set; }
         public DbSet<ToDo> toDos { get; set; }
+        public DbSet<KargoDetay> KargoDetays { get; set; }
+        public DbSet<KargoTakip> KargoTakips { get; set; }
 
     }
 }
